@@ -25,7 +25,7 @@
    tags: composer
 
  - name: Make composer executable
-   shell: chmod a+x /usr/local/bin/composer
+   shell: chmod -с a+x /usr/local/bin/composer
    tags: composer
    register: make_executable_composer
    changed_when: make_executable_composer.stdout.strip() != ""
