@@ -17,6 +17,8 @@
  - name: Install composer
    shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin creates=/usr/local/bin/composer
    tags: composer
+   register: download_composer
+   changed_when: "'is up to date' not in download_composer.stdout"
 
  - name: Rename composer.phar to composer
    shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
@@ -25,3 +27,5 @@
  - name: Make composer executable
    shell: chmod a+x /usr/local/bin/composer
    tags: composer
+   register: make_executable_composer
+   changed_when: "'is up to date' not in make_executable_composer.stdout"
