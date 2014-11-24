@@ -1,4 +1,4 @@
-mongodb
+PHP
 =========
 
 Ansible role for php (Ubuntu server).
@@ -8,7 +8,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         php
+         - role: webbylab.php
 
 License
 -------
