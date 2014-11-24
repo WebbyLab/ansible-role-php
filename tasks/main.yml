@@ -28,4 +28,4 @@
    shell: chmod a+x /usr/local/bin/composer
    tags: composer
    register: make_executable_composer
-   changed_when: "'is up to date' not in make_executable_composer.stdout"
+   changed_when: make_executable_composer.stdout.strip() != ""
