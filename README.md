@@ -3,12 +3,18 @@ PHP
 
 Ansible role for php (Ubuntu server).
 
+Role Variables
+--------------
+
+    php_min_version: 5.4
+
 Example Playbook
 ----------------
 
     - hosts: servers
       roles:
          - role: webbylab.php
+           php_min_version: 5.5
 
 License
 -------
