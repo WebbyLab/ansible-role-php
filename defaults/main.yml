@@ -1,2 +1,2 @@
 ---
-php_version: 5.4
+php_min_version: 5.4

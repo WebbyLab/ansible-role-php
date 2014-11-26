@@ -4,15 +4,15 @@
 
  - name: Add php5.4 repo
    apt_repository: repo=ppa:ondrej/php5-oldstable state='present' update_cache=yes
-   when: "php_version == 5.4"
+   when: "php_min_version == 5.4"
 
  - name: Add php5.5 repo
    apt_repository: repo=ppa:ondrej/php5 state='present' update_cache=yes
-   when: "php_version == 5.5"
+   when: "php_min_version == 5.5"
 
  - name: Add php5.5 repo
    apt_repository: repo=ppa:ondrej/php5-5.6 state='present' update_cache=yes
-   when: "php_version == 5.6"
+   when: "php_min_version == 5.6"
 
  - name: Install php5 packages
    apt: pkg={{ item }} state=installed
