@@ -25,6 +25,7 @@
       - php5-curl
       - php5-mcrypt
       - php5-gd
+      - php5-xdebug
 
  - name: Set short_open_tag
    lineinfile: 'regexp="^short_open_tag .*" line="short_open_tag = On" dest=/etc/php5/fpm/php.ini state=present'
