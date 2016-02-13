@@ -13,7 +13,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - role: webbylab.php
+         - role: WebbyLab.php
            php_min_version: 5.5
 
 License
